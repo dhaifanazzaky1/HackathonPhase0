@@ -1,10 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="cssRegister.css" />
     <title>Register</title>
 </head>
+
 <body>
-    
-    
+    <div class="pembungkus">
+        <h1>Register</h1>
+        <form action="#">
+            <div class="ranahemail">
+                <div class="input">
+                    <input id="inputEmail" type="text" placeholder="Email" />
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="ranaheNama">
+                <div class="input">
+                    <input id="inputNama" type="text" placeholder="Username" />
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+
+            <div class="ranahPW">
+                <div class="input">
+                    <input id="inputPass" type="password" placeholder="Password" />
+                    <i class="fa fa-eye" onclick="bukapw(this, 'inputPass')"></i>
+                </div>
+            </div>
+
+            <div class="ranahcekpw">
+                <div class="input">
+                    <input id="inputCekPass" type="password" placeholder="Cek Password" />
+                    <i class="fa fa-eye" onclick="bukapw(this, 'inputCekPass')"></i>
+                </div>
+            </div>
+
+            <button style="" onclick="masukanData()" type="button" id="tombolSubmit">
+                Submit
+            </button>
+        </form>
+        <div style="margin-top: 30px;">
+            <p>Sudah punya akun? <a id="rootkelogin" href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script>
+        function masukanData() {
+            let email = document.getElementById("inputEmail").value;
+            let name = document.getElementById("inputNama").value;
+            let password = document.getElementById("inputPass").value;
+            let cekPassword = document.getElementById("inputCekPass").value;
+
+            if (!email || !name || !password ) {
+                alert("data tidak boleh kosong")
+                
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("email tidak valid");
+                return;
+            }
+
+            if(password.length < 8){
+                alert("password mu kurang dari 8")
+                return;
+            }
+
+            if (password !== cekPassword) {
+                alert("password dan cek password mu tidak cocok")
+                return
+            }
+            window.location.href = "login.html";
+            
+
+            
+        }
+
+        function bukapw(icon, inputId) {
+            let input = document.getElementById(inputId);
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.className = "fa fa-eye-slash";
+            } else {
+                input.type = "password";
+                icon.className = "fa fa-eye";
+            }
+        }
+    </script>
 </body>
+
 </html>
