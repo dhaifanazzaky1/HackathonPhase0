@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+h1{
+    padding: 20px;
+}
+
+#rootkelogin{
+    font-style: italic;
+    color: red;
+}
+
+.pembungkus{
+    background-color: white;
+    border-radius: 10px;
+    width: 380px;
+    padding: 40px 50px 50px 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tombolSubmit{
+
+    height: 48px;
+    width: 100%;
+    border-radius: 10px;
+    color: #f5f5f5;
+    background: black;
+}
+
+
+.input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+form input {
+    height: 48px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 0 40px 0 16px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+    color: hsl(210, 3%, 23%);
+    background-color: #fff;
+}
+
+.input i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 50%;
+}
