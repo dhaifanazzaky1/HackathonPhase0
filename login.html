@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login | Thrift Shop</title>
+    <title>Login | Retroverse</title>
     <link rel="stylesheet" href="stylelogin.css">
 </head>
 <body>
-
+    <div>
+        <nav class="navbar">
+        <img src="logo-retroverse.png" alt="Logo Retroverse" class="logo">
+        </nav>
+    </div>
     <div class="container">
-        <h1 class="title">Welome Thrifters!</h1>
+        <h1 class="title">Welcome Thrifters!</h1>
 
         <form class="login-form">
-            <label for="username">Username atau Email</label>
-            <input type="text" id="username" placeholder="Masukkan username atau email Anda">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Masukkan email Anda">
 
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Masukkan kata sandi Anda">
 
-            <button type="button" onclick="window.location.href='homepage.html'">Masuk</button>
+            <button type="button" onclick="login()">Masuk</button>
 
             <p class="register">
                 Belum punya akun? <a href="register.html">Daftar Sekarang</a>
             </p>
         </form>
     </div>
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            console.log(users);
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email && users[i].password === password) {
+                    alert("Login berhasil");
+                   
+                    window.location.href = "homepage.html";
+                    return;
+                }
+            }
+
+            alert("Email atau password salah");
+        }
+    </script>
 
 </body>
 </html>
