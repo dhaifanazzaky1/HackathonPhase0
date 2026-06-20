@@ -56,6 +56,37 @@
             let password = document.getElementById("inputPass").value;
             let cekPassword = document.getElementById("inputCekPass").value;
 
+
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            let user = {
+                "email" : email,
+                "name" : name,
+                "password" :password
+            }
+
+            for (let i = 0; i < users.length; i++) {
+                const perUser = users[i];
+                if (perUser.email === email) {
+                    alert("email udh kepake")
+                    return;
+                }
+                
+            }
+
+            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukij ke lkl strg
+
+            // jadi yang di masukin ke local storage yang users
+            //trs masukan user yg buat obj ke users yang gunanya nampung semua data sementara
+            users.push(user)
+
+
+
+            // setelah itu baru masukan ke local strg
+            localStorage.setItem("users", JSON.stringify(users));
+            
+
             if (!email || !name || !password ) {
                 alert("data tidak boleh kosong")
                 
@@ -76,6 +107,7 @@
                 return
             }
             window.location.href = "login.html";
+            
             
 
             
