@@ -6,10 +6,15 @@
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="cssRegister.css" />
-    <title>Register</title>
+    <title>Register | Retroverse</title>
 </head>
 
 <body>
+    <div>
+        <nav class="navbar">
+            <img src="logo-retroverse.png" alt="Logo Retroverse" class="logo">
+        </nav>
+    </div>
     <div class="pembungkus">
         <h1>Register</h1>
         <form action="#">
@@ -41,7 +46,7 @@
                 </div>
             </div>
 
-            <button style="" onclick="masukanData()" type="button" id="tombolSubmit">
+            <button onclick="masukanData()" type="button" id="tombolSubmit">
                 Submit
             </button>
         </form>
@@ -69,13 +74,12 @@
             for (let i = 0; i < users.length; i++) {
                 const perUser = users[i];
                 if (perUser.email === email) {
-                    alert("email udh kepake")
+                    alert("Email Sudah Terdaftar")
                     return;
                 }
-                
             }
 
-            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukij ke lkl strg
+            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukin ke lkl strg
 
             // jadi yang di masukin ke local storage yang users
             //trs masukan user yg buat obj ke users yang gunanya nampung semua data sementara

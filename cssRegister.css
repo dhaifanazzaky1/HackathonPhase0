@@ -1,33 +1,34 @@
-*{
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
-
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background-color: #f5f5f5;
 }
+
+
 h1{
     padding: 20px;
 }
 
-#rootkelogin{
-    font-style: italic;
-    color: red;
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
 }
 
 .pembungkus{
     background-color: white;
     border-radius: 10px;
-    width: 380px;
+    width: 700px;
     padding: 40px 50px 50px 40px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 5px auto;
 }
 
 #tombolSubmit{
@@ -37,8 +38,24 @@ h1{
     border-radius: 10px;
     color: #f5f5f5;
     background: black;
+    font-size: 16px;
+    border: none;
 }
 
+#tombolSubmit:hover{
+
+    height: 48px;
+    width: 100%;
+    border-radius: 10px;
+    color: rgb(20, 20, 20);
+    background: #c7c7c7;
+    font-size: 16px;
+}
+
+#rootkelogin{
+    font-style: italic;
+    color: red;
+}
 
 .input {
     position: relative;
