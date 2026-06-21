@@ -13,7 +13,7 @@
     <div class="wrapper">
 
         <nav class="navbar-home">
-            <img src="image.png" alt="Logo Retroverse" class="logo-home">
+            <img src="back.png" alt="Logo Retroverse" class="logo-back" onclick="balik()">
             <div class="nav-icons">
                 <img src="image.png" alt="Logo Retroverse" class="logo-home">
             </div>
@@ -122,6 +122,12 @@
         localStorage.removeItem("currentUser")
         window.location.href = "login.html";
     }
+
+    function balik() {
+        window.location.href = "homepage.html";
+    }
+
+    
 
 
 
