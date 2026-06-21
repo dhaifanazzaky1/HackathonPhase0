@@ -83,13 +83,9 @@
             }
 
 
-
+            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukin ke lkl strg
             let users = JSON.parse(localStorage.getItem("users")) || [];
 
-             if (!email || !name || !password ) {
-                alert("data tidak boleh kosong")
-                
-            }
             
             if (!email.includes("@") || !email.includes(".")) {
                 alert("email tidak valid");
@@ -104,21 +100,7 @@
                 }
             }
 
-            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukin ke lkl strg
-
-            // jadi yang di masukin ke local storage yang users
-            //trs masukan user yg buat obj ke users yang gunanya nampung semua data sementara
-            users.push(user)
-
-
-
-            // setelah itu baru masukan ke local strg
             localStorage.setItem("users", JSON.stringify(users));
-            
-
-            
-            window.location.href = "login.html";
-            
             
 
             let user = {
