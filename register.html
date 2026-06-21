@@ -65,10 +65,14 @@
 
             let users = JSON.parse(localStorage.getItem("users")) || [];
 
-            let user = {
-                "email" : email,
-                "name" : name,
-                "password" :password
+             if (!email || !name || !password ) {
+                alert("data tidak boleh kosong")
+                
+            }
+            
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("email tidak valid");
+                return;
             }
 
             for (let i = 0; i < users.length; i++) {
@@ -77,28 +81,6 @@
                     alert("Email Sudah Terdaftar")
                     return;
                 }
-            }
-
-            //buat ngambil data yg udh kesimpan di lokal str dan nyimpen sementara user sebelum di masukin ke lkl strg
-
-            // jadi yang di masukin ke local storage yang users
-            //trs masukan user yg buat obj ke users yang gunanya nampung semua data sementara
-            users.push(user)
-
-
-
-            // setelah itu baru masukan ke local strg
-            localStorage.setItem("users", JSON.stringify(users));
-            
-
-            if (!email || !name || !password ) {
-                alert("data tidak boleh kosong")
-                
-            }
-
-            if (!email.includes("@") || !email.includes(".")) {
-                alert("email tidak valid");
-                return;
             }
 
             if(password.length < 8){
@@ -110,11 +92,17 @@
                 alert("password dan cek password mu tidak cocok")
                 return
             }
-            window.location.href = "login.html";
-            
-            
 
+            let user = {
+                "email" : email,
+                "name" : name,
+                "password" : password
+            }
+            users.push(user)
+
+            localStorage.setItem("users", JSON.stringify(users));
             
+            window.location.href = "login.html";            
         }
 
         function bukapw(icon, inputId) {

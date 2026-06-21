@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:white;
+}
+.navbar-home{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f5f5f5;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+.logo-home {
+    width: 150px;
+}
+
+.cart {
+    width: 50px;
+}
+#carouselExampleIndicators {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}

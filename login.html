@@ -34,11 +34,13 @@
 
             let users = JSON.parse(localStorage.getItem("users")) || [];
 
-            console.log(users);
+            if (!email || !password) {
+            alert("Email dan password wajib diisi");
+            return;
+            }
 
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email === email && users[i].password === password) {
-                    alert("Login berhasil");
                    
                     window.location.href = "homepage.html";
                     return;
