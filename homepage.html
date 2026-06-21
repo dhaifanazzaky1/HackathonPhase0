@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home | Thrift Shop!</title>
+        <title>Home | Retroverse</title>
+        <link rel="stylesheet" href="homepage.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <h1>WELCOME TO THRIFT SHOP!</h1>
+        <nav class="navbar-home">
+            <img src="logo-retroverse.png" alt="Logo Retroverse" class="logo-home">
+            <a href="cart.html">
+                <img src="cart-icon.png" alt="cart-icon" class="cart">
+            </a>
+        </nav>
+        <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="carousel1.jpg" class="d-block w-100" alt="carousel-img1">
+    </div>
+    <div class="carousel-item">
+      <img src="carousel2.jpg" class="d-block w-100" alt="carousel-img2">
+    </div>
+    <div class="carousel-item">
+      <img src="carousel3.jpg" class="d-block w-100" alt="carousel-img3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

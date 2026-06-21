@@ -86,10 +86,14 @@
 
             let users = JSON.parse(localStorage.getItem("users")) || [];
 
-            let user = {
-                "email" : email,
-                "name" : name,
-                "password" :password
+             if (!email || !name || !password ) {
+                alert("data tidak boleh kosong")
+                
+            }
+            
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("email tidak valid");
+                return;
             }
 
             for (let i = 0; i < users.length; i++) {
@@ -117,7 +121,16 @@
             
             
 
+            let user = {
+                "email" : email,
+                "name" : name,
+                "password" : password
+            }
+            users.push(user)
+
+            localStorage.setItem("users", JSON.stringify(users));
             
+            window.location.href = "login.html";            
         }
 
         function bukapw(icon, inputId) {
