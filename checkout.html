@@ -2,8 +2,115 @@
 <html>
 <head>
     <title>Checkout | Retroverse</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-light">
+    <!-- Nav Bar -->
+  <nav class="navbar-home">
+    <img src="img/logo-nav.png" alt="Logo Retroverse" class="logo-home">
+    <div class="nav-icons">
+        <a href="profile.html">
+            <img src="img/profile.png" alt="profile-icon" class="cart">
+        </a>
+    </div>
+    </nav>
+    <!-- Nav Bar -->
+     <div>
+        <h1 class="h1-co">CHECKOUT</h1>
+     </div>
+     <div class="container mt-5">
+  <div class="row">
+
+    <!-- ================= LEFT: CART ================= -->
+    <div class="col-md-8">
+      <!-- ITEM -->
+      <div class="card mb-3 p-3">
+        <div class="row align-items-center">
+
+          <!-- FOTO -->
+          <div class="col-md-3">
+            <img src="https://via.placeholder.com/150" class="img-fluid rounded">
+          </div>
+
+          <!-- NAMA -->
+          <div class="col-md-4">
+            <h5 class="mb-1">Jaket Vintage</h5>
+            <small class="text-muted">Size L</small>
+          </div>
+
+          <!-- HARGA -->
+          <div class="col-md-2">
+            <p class="mb-0">Rp 150.000</p>
+          </div>
+
+          <!-- TOTAL -->
+          <div class="col-md-3 text-end">
+            <p class="fw-bold mb-0">Rp 150.000</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card mb-3 p-3">
+        <div class="row align-items-center">
+
+          <div class="col-md-3">
+            <img src="https://via.placeholder.com/150" class="img-fluid rounded">
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="mb-1">Kaos Retro</h5>
+            <small class="text-muted">Size M</small>
+          </div>
+
+          <div class="col-md-2">
+            <p class="mb-0">Rp 80.000</p>
+          </div>
+
+          <div class="col-md-3 text-end">
+            <p class="fw-bold mb-0">Rp 80.000</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ================= RIGHT: TOTAL ================= -->
+    <div class="col-md-4">
+
+      <div class="card p-4">
+        <h5 class="mb-3">Ringkasan</h5>
+
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal</span>
+          <span>Rp 230.000</span>
+        </div>
+
+        <div class="d-flex justify-content-between mb-2">
+          <span>Ongkir</span>
+          <span>Rp 20.000</span>
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Total</span>
+          <span>Rp 250.000</span>
+        </div>
+
+        <button class="btn btn-dark w-100 mt-3">
+          Checkout
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

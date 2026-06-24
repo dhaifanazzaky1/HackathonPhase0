@@ -7,7 +7,7 @@
 <body>
     <div>
         <nav class="navbar">
-        <img src="logo-retroverse.png" alt="Logo Retroverse" class="logo">
+        <img src="img/logo-retroverse.png" alt="Logo Retroverse" class="logo">
         </nav>
     </div>
     <div class="container">
@@ -42,8 +42,10 @@
 
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email === email && users[i].password === password) {
+                    localStorage.setItem("currentUser", JSON.stringify(users[i]));
                    
                     window.location.href = "homepage.html";
+
                     return;
                 }
             }

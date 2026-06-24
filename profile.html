@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profileStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <nav class="navbar-home">
+            <img src="img/back.png" alt="Logo Retroverse" class="logo-back" onclick="balik()">
+            <div class="nav-icons">
+                <img src="img/logo-nav.png" alt="Logo Retroverse" class="logo-home">
+            </div>
+        </nav>
+
+        <h1>Profile</h1>
+        <div class="list profile">
+            <label for="">Name</label>
+            <p id="nama"></p>
+            <i class='fas fa-edit' onclick="editNama()"></i>
+
+
+        </div>
+        <div class="list profile">
+            <label for="">email</label>
+            <p id="email"></p>
+        </div>
+        <div class="list profile">
+            <label for="">password</label>
+            <p id="password"></p>
+            <i class='fas fa-edit' onclick="editPassword()"></i>
+        </div>
+
+        <button onclick="keluar()" class="logut"></button>
+
+
+    </div>
+
+</body>
+
+<script>
+    let userlogin = JSON.parse(localStorage.getItem("currentUser"));
+    let namae = document.getElementById("nama");
+    let emaill = document.getElementById("email");
+    let passwordd = document.getElementById("password");
+
+    function masukindata() {
+        namae.innerText = userlogin.name;
+        emaill.innerText = userlogin.email;
+        passwordd.innerText = userlogin.password;
+    }
+
+    masukindata()
+
+    let userTerdaftar = JSON.parse(localStorage.getItem("users"));
+    // console.log(userTerdaftar);
+    
+
+    function editNama() {
+        let namaBaru = prompt("Masukkan nama baru:", userlogin.name);
+
+        if (!namaBaru) {
+            return
+        }
+        if (namaBaru.trim() === "") {
+            alert("Nama tidak boleh kosong");
+            return;
+        }
+
+        userlogin.name = namaBaru;
+        localStorage.setItem("currentUser", JSON.stringify(userlogin));
+
+        for (let i = 0; i < userTerdaftar.length; i++) {
+            const perUserTerdaftar = userTerdaftar[i];
+            if (perUserTerdaftar.email === userlogin.email) {
+                perUserTerdaftar.name = userlogin.name
+                break
+            }
+        }
+
+        localStorage.setItem("users", JSON.stringify(userTerdaftar));
+
+        masukindata();
+        alert("Nama berhasil diubah");
+    }
+
+    function editPassword() {
+        let pwBaru = prompt("Masukkan nama baru:", userlogin.password);
+
+        if (!pwBaru) {
+            return
+        }
+        if (pwBaru.trim() === "") {
+            alert("Nama tidak boleh kosong");
+            return;
+        }
+
+        userlogin.password = pwBaru;
+        localStorage.setItem("currentUser", JSON.stringify(userlogin));
+
+        for (let i = 0; i < userTerdaftar.length; i++) {
+            const perUserTerdaftar = userTerdaftar[i];
+            if (perUserTerdaftar.email === userlogin.email) {
+                perUserTerdaftar.password = userlogin.password
+                break
+            }
+        }
+
+        localStorage.setItem("users", JSON.stringify(userTerdaftar));
+
+        masukindata();
+        alert("Nama berhasil diubah");
+    }
+
+    function keluar() {
+        localStorage.removeItem("currentUser")
+        window.location.href = "login.html";
+    }
+
+    function balik() {
+        window.location.href = "homepage.html";
+    }
+
+    
+
+
+
+</script>
+
+</html>
