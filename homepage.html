@@ -305,9 +305,9 @@
             if (!produk) return;
 
             let adaDiCart = false;
+
             for (let j = 0; j < cartItems.length; j++) {
                 if (cartItems[j].id === productId) {
-                    cartItems[j].qty += 1;
                     adaDiCart = true;
                     break;
                 }
@@ -361,7 +361,7 @@
 
             for (let i = 0; i < cartItems.length; i++) {
                 let item = cartItems[i];
-                let itemTotal = item.price * item.qty;
+                let itemTotal = item.price;
                 subtotal += itemTotal;
 
                 str += `
