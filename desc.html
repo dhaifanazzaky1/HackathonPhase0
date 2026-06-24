@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="descStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pembungkus"></div>
+
+    <script>
+        function renderitem() {
+
+
+            let item = JSON.parse(localStorage.getItem("item")) || [];
+
+            let penampil = document.getElementsByClassName('pembungkus')
+            console.log(penampil);
+
+            penampil[0].innerHTML = `
+            <div class="product-card">
+    <div class="product-image-container">
+        <img src="${item.img}"
+            alt="${item.title}" class="product-image" />
+        <span id="${item.tagClass}">${item.tag}</span>
+    </div>
+    <div class="product-info">
+
+        <p class="product-id">#${item.id}</p>
+        <h1 class="product-title">${item.title}</h1>
+        <p class="product-price">$${item.price.toFixed(2)} <span class="price-currency">USD</span></p>
+
+        <hr class="divider" />
+
+        <span class="product-category">
+            <i class="ti ti-tag"></i>
+            ${item.cat}
+        </span>
+
+        <p class="deskripsiitem">
+            ${item.desk}
+        </p>
+
+        <button class="back" onclick="back()">
+            <i class="ti ti-shopping-cart"></i>
+            Back to homepage
+        </button>
+
+    </div>
+</div>
+        `
+        }
+
+        function back() {
+            localStorage.removeItem("item")
+            window.location.href = "homepage.html"
+
+        }
+
+        renderitem()
+
+
+    </script>
+
+</body>
+
+</html>

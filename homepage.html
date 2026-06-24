@@ -20,13 +20,10 @@
             <div class="cart-popup" id="cartPopup">
                 <div class="container mt-5">
                     <div class="row">
-                        <!-- Shopping Cart Items -->
                         <div class="col-lg-8">
                             <h3>Your Shopping Cart</h3>
                             <div id="cartItemsContainer"></div>
                         </div>
-
-                        <!-- Cart Summary -->
                         <div class="col-lg-4">
                             <div class="cart-summary">
                                 <h4>Cart Summary</h4>
@@ -99,8 +96,8 @@
                         <a class="nav-link" onclick="filterProduk('jaket')">Jaket</a>
                         <a class="nav-link" onclick="filterProduk('kaos')">Kaos</a>
                         <a class="nav-link" onclick="filterProduk('celana')">Celana</a>
-                        <a class="nav-link">Accessories</a>
-                        <a class="nav-link">Cosmetics</a>
+                        <a class="nav-link" onclick="filterProduk('Accessories')">Accessories</a>
+                        <a class="nav-link" onclick="filterProduk('Accessories')">Cosmetics</a>
                     </div>
                 </div>
             </div>
@@ -123,9 +120,10 @@
                 img: "https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
                 title: "Denim Dresses",
                 price: 55.0,
-                tag: "out of stock",
+                tag: "sale",
                 tagClass: "bg-black",
-                cat: "celana"
+                cat: "celana", 
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
             },
             {
                 id: 2,
@@ -134,7 +132,8 @@
                 price: 70.0,
                 tag: "new",
                 tagClass: "bg-green",
-                cat: "kaos"
+                cat: "kaos",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
             },
             {
                 id: 3,
@@ -142,57 +141,97 @@
                 title: "Pinafore Dresses",
                 price: 60.0,
                 tag: "",
-                tagClass: null,
-                cat: "jaket"
-            }, {
+                tagClass: "",
+                cat: "jaket",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },{
                 id: 4,
-                img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                title: "Pinafore Dresses",
-                price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "celana"
-            }, {
+                img: "https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Denim Dresses",
+                price: 55.0,
+                tag: "sale",
+                tagClass: "bg-black",
+                cat: "celana", 
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },
+            {
                 id: 5,
-                img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                title: "Pinafore Dresses",
-                price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "kaos"
-            }, {
+                img: "https://images.pexels.com/photos/914668/pexels-photo-914668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Empire Waist Dresses",
+                price: 70.0,
+                tag: "new",
+                tagClass: "bg-green",
+                cat: "kaos",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },
+            {
                 id: 6,
                 img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
                 title: "Pinafore Dresses",
                 price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "jaket"
-            }, {
+                tag: "Hot",
+                tagClass: "bg-red",
+                cat: "jaket",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },{
                 id: 7,
-                img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                title: "Pinafore Dresses",
-                price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "celana"
-            }, {
+                img: "https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Denim Dresses",
+                price: 55.0,
+                tag: "sale",
+                tagClass: "bg-black",
+                cat: "celana", 
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },
+            {
                 id: 8,
-                img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                title: "Pinafore Dresses",
-                price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "kaos"
-            }, {
+                img: "https://images.pexels.com/photos/914668/pexels-photo-914668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Empire Waist Dresses",
+                price: 70.0,
+                tag: "new",
+                tagClass: "bg-green",
+                cat: "kaos",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },
+            {
                 id: 9,
                 img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
                 title: "Pinafore Dresses",
                 price: 60.0,
-                tag: null,
-                tagClass: null,
-                cat: "jaket"
+                tag: "",
+                tagClass: "",
+                cat: "jaket",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },{
+                id: 10,
+                img: "https://images.pexels.com/photos/6764040/pexels-photo-6764040.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Denim Dresses",
+                price: 55.0,
+                tag: "sale",
+                tagClass: "bg-black",
+                cat: "celana", 
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
             },
+            {
+                id: 11,
+                img: "https://images.pexels.com/photos/914668/pexels-photo-914668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Empire Waist Dresses",
+                price: 70.0,
+                tag: "new",
+                tagClass: "bg-green",
+                cat: "kaos",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            },
+            {
+                id: 12,
+                img: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                title: "Pinafore Dresses",
+                price: 60.0,
+                tag: "",
+                tagClass: "",
+                cat: "jaket",
+                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
+            }
 
         ];
         ;
@@ -209,8 +248,7 @@
         <div class="product">
           <img src="${produk.img}" alt="${produk.title}">
           <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-            <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-            <li class="icon mx-3"><span class="far fa-heart"></span></li>
+            <li class="icon" onclick="masukandataitem(${produk.id})"><span class="fas fa-expand-arrows-alt"></span></li>
             <li class="icon" onclick="addToCart(${produk.id})"><span class="fas fa-shopping-bag"></span></li>
           </ul>
           <div class="tag ${produk.tagClass || ''}">${produk.tag || ''}</div>
@@ -247,18 +285,18 @@
             event.preventDefault();
             const cartPopup = document.getElementById('cartPopup');
             if (cartPopup.style.display === 'none' || cartPopup.style.display === '') {
-                cartPopup.style.display = 'block'; 
+                cartPopup.style.display = 'block';
             } else {
-                cartPopup.style.display = 'none'; 
+                cartPopup.style.display = 'none';
             }
         }
 
-        var cartItems = [];
+        let cartItems = [];
 
 
         function addToCart(productId) {
-            var produk = null;
-            for (var i = 0; i < products.length; i++) {
+            let produk = null;
+            for (let i = 0; i < products.length; i++) {
                 if (products[i].id === productId) {
                     produk = products[i];
                     break;
@@ -266,8 +304,8 @@
             }
             if (!produk) return;
 
-            var adaDiCart = false;
-            for (var j = 0; j < cartItems.length; j++) {
+            let adaDiCart = false;
+            for (let j = 0; j < cartItems.length; j++) {
                 if (cartItems[j].id === productId) {
                     cartItems[j].qty += 1;
                     adaDiCart = true;
@@ -291,8 +329,8 @@
         }
 
         function removeFromCart(productId) {
-            var newCart = [];
-            for (var i = 0; i < cartItems.length; i++) {
+            let newCart = [];
+            for (let i = 0; i < cartItems.length; i++) {
                 if (cartItems[i].id !== productId) {
                     newCart.push(cartItems[i]);
                 }
@@ -301,16 +339,16 @@
             renderCart();
         }
 
-  
-        
 
-  
+
+
+
         function renderCart() {
-            var container = document.getElementById('cartItemsContainer');
-            var subtotalEl = document.getElementById('cartSubtotal');
-            var totalEl = document.getElementById('cartTotal');
+            let container = document.getElementById('cartItemsContainer');
+            let subtotalEl = document.getElementById('cartSubtotal');
+            let totalEl = document.getElementById('cartTotal');
 
-      
+
             if (cartItems.length === 0) {
                 container.innerHTML = '<p class="text-muted">Keranjang masih kosong.</p>';
                 subtotalEl.textContent = '$0.00';
@@ -318,15 +356,15 @@
                 return;
             }
 
-            var html = '';
-            var subtotal = 0;
+            let str = '';
+            let subtotal = 0;
 
-            for (var i = 0; i < cartItems.length; i++) {
-                var item = cartItems[i];
-                var itemTotal = item.price * item.qty;
+            for (let i = 0; i < cartItems.length; i++) {
+                let item = cartItems[i];
+                let itemTotal = item.price * item.qty;
                 subtotal += itemTotal;
 
-                html += `
+                str += `
                 <div class="cart-item d-flex justify-content-between">
                     <div class="d-flex">
                         <img src="${item.img}" alt="${item.title}" class="product-img me-3">
@@ -344,14 +382,46 @@
                 `;
             }
 
-            container.innerHTML = html;
+            container.innerHTML = str;
             subtotalEl.textContent = '$' + subtotal.toFixed(2);
             totalEl.textContent = '$' + (subtotal + 5).toFixed(2);
         }
+
+        function masukandataitem(productid) {
+            for (const perProduct of products) {
+                if (perProduct.id === productid) {
+                    let item = {
+                        id: perProduct.id,
+                        img: perProduct.img,
+                        title: perProduct.title,
+                        price: perProduct.price,
+                        tag: perProduct.tag,
+                        tagClass: perProduct.tagClass,
+                        cat: perProduct.cat,
+                        desk: perProduct.desk
+                    }
+
+                    localStorage.setItem("item", JSON.stringify(item));
+                    window.location.href = "desc.html"; 
+
+                }
+
+
+            }
+
+        }
+        
+
+
+
+
+
         renderCart();
 
         renderProduk(products); 
     </script>
+
+
 </body>
 
 </html>
