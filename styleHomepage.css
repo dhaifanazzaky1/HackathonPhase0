@@ -4,7 +4,6 @@ body {
     background-color: white;
 }
 
-
 .nav-icons {
     position: relative;
     display: flex;
@@ -95,17 +94,17 @@ body {
 }
 
 .navbar-home {
-    position: sticky;
+    position: fixed; 
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background-color: #f5f5f5;
-    opacity: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .h1-co{
