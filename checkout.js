@@ -38,7 +38,7 @@ function renderCheckout(){
     let total = subtotal + 5;
     document.getElementById('subtotalText').innerHTML = '$' + subtotal.toFixed(2);
     document.getElementById('summarySubtotal').innerHTML = '$' + subtotal.toFixed(2);
-    document.getElementById('summaryTotal') = '$' + total.toFixed(2);
+    document.getElementById('summaryTotal').innerHTML = '$' + total.toFixed(2);
 }
 renderCheckout()
 
@@ -82,7 +82,7 @@ function checkoutOrder(){
         let found = 0;
 
         for(let j = 0; j < cartItems.length; j++){
-            if(products[i] === cartItems[j].id){
+            if(products[i].id === cartItems[j].id){
                 found++
             }
         }
