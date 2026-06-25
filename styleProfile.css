@@ -26,7 +26,11 @@ body {
 
 .logo-back{
     width: 30px;
+    cursor: pointer;
 
+}
+.logo-back :hover{
+    transform: scale(1.1);
 }
 .logo-home {
     width: 150px;

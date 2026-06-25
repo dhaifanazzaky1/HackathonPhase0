@@ -12,6 +12,30 @@ body {
     gap: 15px; 
 }
 
+.cart-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.totalCart{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.cart{
+    width: 30px;
+}
 
 .cart-popup {
     display: none; 
@@ -61,6 +85,15 @@ body {
 
 .cart-popup.open { display: block; }
 
+.btn-checkout{
+    font-size: 15px;
+    border: none;
+    background-color: black;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+}
+
 .navbar-home {
     position: sticky;
     top: 0;
@@ -75,6 +108,12 @@ body {
 
 }
 
+.h1-co{
+   text-align: center;
+   padding-top: 50px;
+
+}
+
 #myNav .nav-link {
   cursor: pointer;
 }
@@ -83,10 +122,6 @@ body {
 
 .logo-home {
     width: 150px;
-}
-
-.cart {
-    width: 30px;
 }
 
 #carouselExampleIndicators {
@@ -129,11 +164,6 @@ body {
     transition: bottom .3s;
 }
 
-/* .product-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-} */
 
 .product:hover .icons {
     bottom: 15px;

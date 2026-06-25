@@ -6,52 +6,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="styleHomepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar-home">
-        <img src="image.png" alt="Logo Retroverse" class="logo-home">
-        <div class="nav-icons">
-            <a href="#" onclick="toggleCartPopup(event)">
-                <img src="cart-icon.png" alt="cart-icon" class="cart">
-            </a>
-            <div class="cart-popup" id="cartPopup">
-                <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h3>Your Shopping Cart</h3>
-                            <div id="cartItemsContainer"></div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="cart-summary">
-                                <h4>Cart Summary</h4>
-                                <ul class="list-unstyled">
-                                    <li class="d-flex justify-content-between">
-                                        <span>Subtotal:</span>
-                                        <span id="cartSubtotal">$0.00</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between">
-                                        <span>Shipping:</span>
-                                        <span>$5.00</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between">
-                                        <span class="total-price">Total:</span>
-                                        <span class="total-price" id="cartTotal">$5.00</span>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-checkout w-100">Proceed to Checkout</button>
+    <!-- NAV BAR -->
+    <div>
+        <nav class="navbar-home">
+            <img src="/img/logo-nav.png" alt="Logo Retroverse" class="logo-home">
+            <div class="nav-icons">
+                <a href="#" onclick="toggleCartPopup(event)" class="cart-wrapper">
+                    <img src="/img/cart-icon.png" alt="cart-icon" class="cart">
+                    <span class="totalCart" id="totalCart">0</span>
+                </a>
+                <div class="cart-popup" id="cartPopup">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <!-- Shopping Cart Items -->
+                            <div class="col-lg-8">
+                                <h3>Your Shopping Cart</h3>
+                                <div id="cartItemsContainer"></div>
+                            </div>
+
+                            <!-- Cart Summary -->
+                            <div class="col-lg-4">
+                                <div class="cart-summary">
+                                    <h4>Cart Summary</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex justify-content-between">
+                                            <span>Subtotal:</span>
+                                            <span id="cartSubtotal">$0.00</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span>Shipping:</span>
+                                            <span>$5.00</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span class="total-price">Total:</span>
+                                            <span class="total-price" id="cartTotal">$5.00</span>
+                                        </li>
+                                    </ul>
+                                    <a href="checkout.html"><button class="btn-checkout">Proceed to Checkout</button></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <a href="profile.html">
+                    <img src="/img/profile.png" alt="profile-icon" class="cart">
+                </a>
             </div>
-            <a href="profile.html">
-                <img src="profile.png" alt="profile-icon" class="cart">
-            </a>
-        </div>
-    </nav>
+        </nav>
+    </div>
+    <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -63,13 +71,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="carousel1.jpg" class="d-block w-100" alt="carousel-img1">
+                <img src="/img/carousel1.jpg" class="d-block w-100" alt="carousel-img1">
             </div>
             <div class="carousel-item">
-                <img src="carousel2.jpg" class="d-block w-100" alt="carousel-img2">
+                <img src="/img/carousel2.jpg" class="d-block w-100" alt="carousel-img2">
             </div>
             <div class="carousel-item">
-                <img src="carousel3.jpg" class="d-block w-100" alt="carousel-img3">
+                <img src="/img/carousel3.jpg" class="d-block w-100" alt="carousel-img3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -110,337 +118,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script>
-
-        const products = [
-
-            {
-                id: 1,
-                img: "assets/3307399721972270.jpeg",
-                title: "Flight Jacket Mirage",
-                price: 20.0,
-                tag: "sale",
-                tagClass: "bg-black",
-                cat: "jaket", 
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 2,
-                img: "assets/shirt/linkin park meteora shirt.jpeg",
-                title: "Linkin Park Meteora Green T-Shirt",
-                price: 7.0,
-                tag: "new",
-                tagClass: "bg-green",
-                cat: "kaos",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 3,
-                img: "assets/accessories/New Arrivals _ California Sportswear _ Stüssy.jpeg",
-                title: "Stussy Blue Skull Cap",
-                price: 15.0,
-                tag: "",
-                tagClass: "",
-                cat: "Accessories",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },{
-                id: 4,
-                img: "assets/pants/VAGUE Studios.webp",
-                title: "Army Cargo Pants",
-                price: 12.0,
-                tag: "sale",
-                tagClass: "bg-black",
-                cat: "celana", 
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 5,
-                img: "assets/shirt/METALLICA KILL 'EM ALL VINTAGE T-SHIRT - XXS _ HEAVY RELIC BLACK.webp",
-                title: "Metallica Kill Em All T-shirt",
-                price: 7.0,
-                tag: "",
-                tagClass: "",
-                cat: "kaos",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 6,
-                img: "assets/By_ @smoothcactusstore   Shop similar products….jpeg",
-                title: "TNF Black On Grey Jacket",
-                price: 60.0,
-                tag: "Hot",
-                tagClass: "bg-red",
-                cat: "jaket",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },{
-                id: 7,
-                img: "assets/pants/Vintage Denim Pants.jpeg",
-                title: "Blue Bionic Jeans",
-                price: 5.0,
-                tag: "sale",
-                tagClass: "bg-black",
-                cat: "celana", 
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 8,
-                img: "assets/shirt/Slipknot Distressed Graphic Tee.jpeg",
-                title: "Slipknot Black Fire T-Shirt",
-                price: 10.0,
-                tag: "",
-                tagClass: "",
-                cat: "kaos",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 9,
-                img: "assets/For Sale_ Adidas Chinese New Year Heavy Jacket….webp",
-                title: "Adidas CTT Blue",
-                price: 90.0,
-                tag: "",
-                tagClass: "",
-                cat: "jaket",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },{
-                id: 10,
-                img: "assets/pants/114208540546934960.webp",
-                title: "Nike Tracker Pants",
-                price: 55.0,
-                tag: "sale",
-                tagClass: "bg-black",
-                cat: "celana", 
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 11,
-                img: "assets/shirt/coolest weezer shirt tbh.webp",
-                title: "WEEZER White T-Shirt",
-                price: 8.0,
-                tag: "new",
-                tagClass: "bg-green",
-                cat: "kaos",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 12,
-                img: "assets/Search_ 11 results found for _.webp",
-                title: "Carhartt Caramel",
-                price: 60.0,
-                tag: "Hot",
-                tagClass: "bg-red",
-                cat: "jaket",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 13,
-                img: "assets/pants/Depop Men's Jeans $70_00.webp",
-                title: "Baggy Grey Jeans",
-                price: 15.0,
-                tag: "",
-                tagClass: "",
-                cat: "celana",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            },
-            {
-                id: 14,
-                img: "assets/accessories/nike triax.jpeg",
-                title: "Nike Triax Watch",
-                price: 30.0,
-                tag: "Hot",
-                tagClass: "bg-red",
-                cat: "Accessories",
-                desk : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iste quas, quae magni voluptate quia ipsam architecto rem natus facilis? Ratione necessitatibus, a inventore unde magni voluptates maiores non pariatur."
-            }
-
-        ];
-        ;
-
-        function renderProduk(list) {
-            const grid = document.getElementById("productGrid");
-
-            let codePerCard = "";
-
-            for (let i = 0; i < list.length; i++) {
-                const produk = list[i];
-                codePerCard += `
-      <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-        <div class="product">
-          <img src="${produk.img}" alt="${produk.title}">
-          <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-            <li class="icon" onclick="masukandataitem(${produk.id})"><span class="fas fa-expand-arrows-alt"></span></li>
-            <li class="icon" onclick="addToCart(${produk.id})"><span class="fas fa-shopping-bag"></span></li>
-          </ul>
-          <div class="tag ${produk.tagClass || ''}">${produk.tag || ''}</div>
-        </div>
-        <div class="title pt-4 pb-1">${produk.title}</div>
-        <div class="price">$ ${produk.price.toFixed(1)}</div>
-      </div>
-    `;
-            }
-            grid.innerHTML = codePerCard;
-        }
-
-        function filterProduk(kategori) {
-            const semualink = document.querySelectorAll('#myNav .nav-link');
-            for (let i = 0; i < semualink.length; i++) {
-                semualink[i].classList.remove('active');
-            }
-            event.target.classList.add('active');
-
-            if (kategori === 'all') {
-                renderProduk(products);
-            } else {
-                const filtered = [];
-                for (let i = 0; i < products.length; i++) {
-                    if (products[i].cat === kategori) {
-                        filtered.push(products[i]);
-                    }
-                }
-                renderProduk(filtered);
-            }
-        }
-
-        function toggleCartPopup(event) {
-            event.preventDefault();
-            const cartPopup = document.getElementById('cartPopup');
-            if (cartPopup.style.display === 'none' || cartPopup.style.display === '') {
-                cartPopup.style.display = 'block';
-            } else {
-                cartPopup.style.display = 'none';
-            }
-        }
-
-        let cartItems = [];
-
-
-        function addToCart(productId) {
-            let produk = null;
-            for (let i = 0; i < products.length; i++) {
-                if (products[i].id === productId) {
-                    produk = products[i];
-                    break;
-                }
-            }
-            if (!produk) return;
-
-            let adaDiCart = false;
-
-            for (let j = 0; j < cartItems.length; j++) {
-                if (cartItems[j].id === productId) {
-                    adaDiCart = true;
-                    break;
-                }
-            }
-
-            if (!adaDiCart) {
-                cartItems.push({
-                    id: produk.id,
-                    img: produk.img,
-                    title: produk.title,
-                    price: produk.price,
-                    qty: 1
-                });
-            }
-
-            renderCart();
-
-            document.getElementById('cartPopup').style.display = 'block';
-        }
-
-        function removeFromCart(productId) {
-            let newCart = [];
-            for (let i = 0; i < cartItems.length; i++) {
-                if (cartItems[i].id !== productId) {
-                    newCart.push(cartItems[i]);
-                }
-            }
-            cartItems = newCart;
-            renderCart();
-        }
-
-
-
-
-
-        function renderCart() {
-            let container = document.getElementById('cartItemsContainer');
-            let subtotalEl = document.getElementById('cartSubtotal');
-            let totalEl = document.getElementById('cartTotal');
-
-
-            if (cartItems.length === 0) {
-                container.innerHTML = '<p class="text-muted">Keranjang masih kosong.</p>';
-                subtotalEl.textContent = '$0.00';
-                totalEl.textContent = '$5.00';
-                return;
-            }
-
-            let str = '';
-            let subtotal = 0;
-
-            for (let i = 0; i < cartItems.length; i++) {
-                let item = cartItems[i];
-                let itemTotal = item.price;
-                subtotal += itemTotal;
-
-                str += `
-                <div class="cart-item d-flex justify-content-between">
-                    <div class="d-flex">
-                        <img src="${item.img}" alt="${item.title}" class="product-img me-3">
-                        <div>
-                            <h5>${item.title}</h5>
-                            <p class="text-muted">$${item.price.toFixed(2)} / item</p>
-            
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column justify-content-between">
-                        <span>$${itemTotal.toFixed(2)}</span>
-                        <button class="btn btn-sm btn-danger" onclick="removeFromCart(${item.id})">Remove</button>
-                    </div>
-                </div>
-                `;
-            }
-
-            container.innerHTML = str;
-            subtotalEl.textContent = '$' + subtotal.toFixed(2);
-            totalEl.textContent = '$' + (subtotal + 5).toFixed(2);
-        }
-
-        function masukandataitem(productid) {
-            for (const perProduct of products) {
-                if (perProduct.id === productid) {
-                    let item = {
-                        id: perProduct.id,
-                        img: perProduct.img,
-                        title: perProduct.title,
-                        price: perProduct.price,
-                        tag: perProduct.tag,
-                        tagClass: perProduct.tagClass,
-                        cat: perProduct.cat,
-                        desk: perProduct.desk
-                    }
-
-                    localStorage.setItem("item", JSON.stringify(item));
-                    window.location.href = "desc.html"; 
-
-                }
-
-
-            }
-
-        }
-        
-
-
-
-
-
-        renderCart();
-
-        renderProduk(products); 
-    </script>
-
-
+    <script src="homepage.js"></script>
 </body>
 
 </html>
